@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Scrollbar-nav by yujiangshui</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Scrollbar-nav</h1>
+        <p>Scrollbar nav 为页面正文提供更好的跳转用户体验。</p>
+        <p class="view"><a href="https://github.com/yujiangshui/scrollbar-nav">View the Project on GitHub <small>yujiangshui/scrollbar-nav</small></a></p>
+        <ul>
+          <li><a href="https://github.com/yujiangshui/scrollbar-nav/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/yujiangshui/scrollbar-nav/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/yujiangshui/scrollbar-nav">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="scrollbar-nav" class="anchor" href="#scrollbar-nav"><span class="octicon octicon-link"></span></a>scrollbar-nav</h1>
+
+<p>Scrollbar nav 为页面正文提供更好的跳转用户体验。</p>
+
+<p>它会将你正文内容中的 标题 抽出，创建一个位于滚动条附近的导航，并且导航的位置与你正文标题位置大体一致，点击导航会自动滚到正文对应位置。</p>
+
+<p><img src="./img/scrollbar-nav.png" alt="scrollbar-nav"></p>
+
+<p>你可以下载下来，打开 <code>test/index.html</code> 查看效果。</p>
+
+<h2>
+<a name="%E7%94%A8%E6%B3%95" class="anchor" href="#%E7%94%A8%E6%B3%95"><span class="octicon octicon-link"></span></a>用法</h2>
+
+<p>引入 <code>jQuery</code> 和 <code>jquery.scrollbar-nav.js</code>。</p>
+
+<p>调用：</p>
+
+<pre><code>    $('.content').scrollbarNav();
+
+</code></pre>
+
+<p>即可自动获取正文 hn 标题并输出到边栏。</p>
+
+<h2>
+<a name="%E5%8F%82%E6%95%B0" class="anchor" href="#%E5%8F%82%E6%95%B0"><span class="octicon octicon-link"></span></a>参数</h2>
+
+<pre><code>$('.content').scrollbarNav({
+    topOffset : 10
+});
+</code></pre>
+
+<p>目前暂时只支持 <code>topOffset</code> 参数，设置一个数值表示滚动时，标题距离头部的偏移值。</p>
+
+<p>这样可以防止标题紧贴浏览器，同时防止带有 fixed header 的 header 遮住标题。</p>
+
+<p>如果你带有 fixed header，请讲此值设置为你 header 的高度。</p>
+
+<h2>
+<a name="%E5%A4%96%E8%A7%82" class="anchor" href="#%E5%A4%96%E8%A7%82"><span class="octicon octicon-link"></span></a>外观</h2>
+
+<p>目前仅提供非常简单的外观（在 <code>jquery.scrollbar-nav.css</code>）中定义，你可以发挥你的想象修改样式以适应你网站的外观和风格。</p>
+
+<ul>
+<li>
+<code>.scroll-nav</code> 类包裹整个结构。</li>
+<li>
+<code>.scroll-nav li</code> 用来修饰每一条。</li>
+<li>针对不同的 <code>hn</code> 会在 <code>li</code> 上输出不同的 <code>.scroll-nav-hn</code> 类，例如 <code>h2</code> 标题会输出 <code>.scroll-nav-h2</code>，由此你可以针对不同级别的标题设置不同的大小和尺寸。</li>
+</ul>
+
+<h2>
+<a name="todo" class="anchor" href="#todo"><span class="octicon octicon-link"></span></a>TODO</h2>
+
+<ul>
+<li>添加更多可配置参数（滚动效果、滚动持续时间）。</li>
+<li>测试小屏幕、浏览器兼容性，并做优化。</li>
+<li>滚动到当前区域后，对应标题高亮功能。</li>
+<li>测试大量标签、长篇大论的情况，并做处理。</li>
+<li>测试不同标签相互嵌套以及 hn 里面包裹其他标签情况。</li>
+</ul>
+
+<h2>
+<a name="%E6%97%A5%E5%BF%97" class="anchor" href="#%E6%97%A5%E5%BF%97"><span class="octicon octicon-link"></span></a>日志</h2>
+
+<h3>
+<a name="20141011" class="anchor" href="#20141011"><span class="octicon octicon-link"></span></a>2014.10.11</h3>
+
+<ul>
+<li>完成第一个初始版本。</li>
+</ul>
+
+<h2>
+<a name="%E5%8D%8F%E8%AE%AE" class="anchor" href="#%E5%8D%8F%E8%AE%AE"><span class="octicon octicon-link"></span></a>协议</h2>
+
+<p>MIT</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/yujiangshui">yujiangshui</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-39292627-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
