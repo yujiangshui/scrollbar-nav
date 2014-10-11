@@ -1,0 +1,29 @@
+.scroll-nav{
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	list-style-type: none;
+	min-width: 200px;
+	padding: 0;
+	margin: 0;
+}
+.scroll-nav li{
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+	color: #fff;
+	background: #27ae60;
+	font-size: 12px;
+	padding: 4px;
+	-webkit-transition: all .1s ease;
+	-o-transition: all .1s ease;
+	transition: all .1s ease;
+}
+.scroll-nav li:hover{
+	font-weight: bold;
+	background: #2ecc71;
+	z-index: 100;
+	font-size: 14px;
+	padding: 6px;
+}
